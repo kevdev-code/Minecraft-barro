@@ -1,0 +1,43 @@
+# Herramientas locales / agentes
+.github/
+.impeccable/
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# Loom / Architectury
+run/
+runs/
+remappedSrc/
+.architectury-transformer/
+
+# Eclipse / VS Code
+bin/
+.classpath
+.project
+.settings/
+.factorypath
+.vscode/
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Minecraft / JVM
+logs/
+crash-reports/
+*.log
+*.hprof
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini

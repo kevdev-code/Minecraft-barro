@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[1,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT (code), All Rights Reserved (art, see LICENSE-ASSETS)"
 
 [[mods]]
 modId = "barro"
 version = "${version}"
 displayName = "Barro"
-authors = "Me!"
+authors = "kevdev-code"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''

@@ -5,13 +5,16 @@
   "name": "Barro",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "kevdev-code"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/kevdev-code/Minecraft-barro",
+    "sources": "https://github.com/kevdev-code/Minecraft-barro"
   },
-  "license": "CC0-1.0",
+  "license": [
+    "MIT",
+    "LicenseRef-All-Rights-Reserved"
+  ],
   "icon": "assets/barro/icon.png",
   "environment": "*",
   "entrypoints": {

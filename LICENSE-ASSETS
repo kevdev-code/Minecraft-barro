@@ -1,0 +1,11 @@
+Barro art: All Rights Reserved
+
+Copyright (c) 2026 kevdev-code. All rights reserved.
+
+The following files are not covered by the MIT license in LICENSE. They may not be
+copied, modified, redistributed or used in other projects, including mods, resource
+packs and forks, without prior written permission from the copyright holder:
+
+- Every image file under common/src/main/resources/assets/barro/, including block
+  textures and the mod icon.
+- The texture designs in tools/textures/*.txt, except pal.txt.

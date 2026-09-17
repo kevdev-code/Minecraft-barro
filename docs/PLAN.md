@@ -213,6 +213,13 @@ El último punto es el que se olvida. Compilar no es evidencia de que se vea bie
       Architectury bajó al piso de la línea 20.x (`>=20.0.12`); se sube cuando se use
       algo que no exista ahí
 - [ ] Definir si la creative tab agrupa todo o se separa por material
+- [x] Licencia: código MIT (`LICENSE`), arte con todos los derechos reservados
+      (`LICENSE-ASSETS`). Ambos archivos van dentro de los jars
+- [ ] En la Fase 4, agregar los modelos de Blockbench a `LICENSE-ASSETS`: también
+      son arte y hoy la licencia solo nombra imágenes y specs de texturas
+- [ ] Antes de publicar: descripción real del mod en `fabric.mod.json` y
+      `neoforge.mods.toml` (sigue la de la plantilla), y quitar `"suggests":
+      {"another-mod"}` de la plantilla
 
 ## 9. Backlog
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "barro:block/losa_de_cantera"
+    },
+    "type=double": {
+      "model": "barro:block/cantera"
+    },
+    "type=top": {
+      "model": "barro:block/losa_de_cantera_top"
+    }
+  }
+}

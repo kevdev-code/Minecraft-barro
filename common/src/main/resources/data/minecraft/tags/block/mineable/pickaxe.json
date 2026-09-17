@@ -12,8 +12,17 @@
     "barro:azulejo_talavera_liso_amarillo",
     "barro:azulejo_talavera_liso_verde",
     "barro:barro_cocido",
+    "barro:losa_de_barro_cocido",
+    "barro:escaleras_de_barro_cocido",
+    "barro:pared_de_barro_cocido",
     "barro:petatillo",
     "barro:adobe",
-    "barro:cantera"
+    "barro:losa_de_adobe",
+    "barro:escaleras_de_adobe",
+    "barro:pared_de_adobe",
+    "barro:cantera",
+    "barro:losa_de_cantera",
+    "barro:escaleras_de_cantera",
+    "barro:pared_de_cantera"
   ]
 }

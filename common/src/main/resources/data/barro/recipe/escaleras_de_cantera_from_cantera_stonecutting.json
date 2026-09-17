@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "barro:cantera",
+  "result": {
+    "id": "barro:escaleras_de_cantera"
+  }
+}

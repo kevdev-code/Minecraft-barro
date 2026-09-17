@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cantera": {
+      "conditions": {
+        "items": [
+          {
+            "items": "barro:cantera"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "barro:escaleras_de_cantera"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cantera"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "barro:escaleras_de_cantera"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "barro:block/barro_cocido",
+    "side": "barro:block/barro_cocido",
+    "top": "barro:block/barro_cocido"
+  }
+}

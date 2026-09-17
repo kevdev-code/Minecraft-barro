@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "barro:block/losa_de_adobe"
+    },
+    "type=double": {
+      "model": "barro:block/adobe"
+    },
+    "type=top": {
+      "model": "barro:block/losa_de_adobe_top"
+    }
+  }
+}

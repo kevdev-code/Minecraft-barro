@@ -12,7 +12,16 @@
   "block.barro.azulejo_talavera_liso_amarillo": "Plain Yellow Talavera Tile",
   "block.barro.azulejo_talavera_liso_verde": "Plain Green Talavera Tile",
   "block.barro.barro_cocido": "Fired Clay",
+  "block.barro.losa_de_barro_cocido": "Fired Clay Slab",
+  "block.barro.escaleras_de_barro_cocido": "Fired Clay Stairs",
+  "block.barro.pared_de_barro_cocido": "Fired Clay Wall",
   "block.barro.petatillo": "Petatillo Floor",
   "block.barro.adobe": "Adobe",
-  "block.barro.cantera": "Cantera Stone"
+  "block.barro.losa_de_adobe": "Adobe Slab",
+  "block.barro.escaleras_de_adobe": "Adobe Stairs",
+  "block.barro.pared_de_adobe": "Adobe Wall",
+  "block.barro.cantera": "Cantera Stone",
+  "block.barro.losa_de_cantera": "Cantera Stone Slab",
+  "block.barro.escaleras_de_cantera": "Cantera Stone Stairs",
+  "block.barro.pared_de_cantera": "Cantera Stone Wall"
 }

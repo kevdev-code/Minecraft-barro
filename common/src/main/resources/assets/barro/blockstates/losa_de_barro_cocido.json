@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "barro:block/losa_de_barro_cocido"
+    },
+    "type=double": {
+      "model": "barro:block/barro_cocido"
+    },
+    "type=top": {
+      "model": "barro:block/losa_de_barro_cocido_top"
+    }
+  }
+}

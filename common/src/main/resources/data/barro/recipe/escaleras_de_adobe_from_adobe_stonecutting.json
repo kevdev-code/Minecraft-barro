@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "barro:adobe",
+  "result": {
+    "id": "barro:escaleras_de_adobe"
+  }
+}

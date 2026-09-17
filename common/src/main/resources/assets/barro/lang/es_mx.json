@@ -12,7 +12,16 @@
   "block.barro.azulejo_talavera_liso_amarillo": "Azulejo de talavera liso amarillo",
   "block.barro.azulejo_talavera_liso_verde": "Azulejo de talavera liso verde",
   "block.barro.barro_cocido": "Barro cocido",
+  "block.barro.losa_de_barro_cocido": "Losa de barro cocido",
+  "block.barro.escaleras_de_barro_cocido": "Escaleras de barro cocido",
+  "block.barro.pared_de_barro_cocido": "Pared de barro cocido",
   "block.barro.petatillo": "Petatillo",
   "block.barro.adobe": "Adobe",
-  "block.barro.cantera": "Cantera"
+  "block.barro.losa_de_adobe": "Losa de adobe",
+  "block.barro.escaleras_de_adobe": "Escaleras de adobe",
+  "block.barro.pared_de_adobe": "Pared de adobe",
+  "block.barro.cantera": "Cantera",
+  "block.barro.losa_de_cantera": "Losa de cantera",
+  "block.barro.escaleras_de_cantera": "Escaleras de cantera",
+  "block.barro.pared_de_cantera": "Pared de cantera"
 }

@@ -131,6 +131,16 @@ _Técnica: modelos heredados. Muy poco esfuerzo, mucho valor de construcción._
 
 - Losa, escalera y muro de cada material de la Fase 1
 
+Hecho para los materiales base: `barro_cocido`, `adobe` y `cantera`, 9 bloques en
+total.
+
+- **Ids:** `losa_de_*`, `escaleras_de_*` y `pared_de_*`, con los mismos términos que
+  usa vanilla en es_mx ("Losa de…", "Escaleras de…", "Pared de…").
+- **Fuera:** la talavera, porque el patrón queda cortado en medio bloque (vanilla
+  tampoco tiene losas de terracota vidriada), y el petatillo, que es acabado de piso.
+- **Recetas:** las de vanilla (3 → 6 losas, 6 → 4 escaleras, 6 → 6 paredes), más el
+  cortapiedras desde el bloque base.
+
 ### Fase 3 — Modelos planos y colgantes
 
 _Técnica: modelos no cúbicos, rotación por blockstate._

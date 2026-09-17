@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "barro:adobe",
+  "result": {
+    "id": "barro:pared_de_adobe"
+  }
+}

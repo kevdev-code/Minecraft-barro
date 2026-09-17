@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "barro:cantera",
+  "result": {
+    "count": 2,
+    "id": "barro:losa_de_cantera"
+  }
+}

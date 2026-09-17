@@ -1,5 +1,6 @@
 package io.github.kevdev_code.barro;
 
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import dev.architectury.registry.CreativeTabRegistry;
@@ -15,7 +16,10 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -41,10 +45,19 @@ public final class BarroContent {
     public static final RegistrySupplier<Block> AZULEJO_TALAVERA_LISO_VERDE = block("azulejo_talavera_liso_verde", () -> talavera(DyeColor.GREEN));
     // Fired clay
     public static final RegistrySupplier<Block> BARRO_COCIDO = block("barro_cocido", BarroContent::barro);
+    public static final RegistrySupplier<Block> LOSA_DE_BARRO_COCIDO = slab("losa_de_barro_cocido", BARRO_COCIDO);
+    public static final RegistrySupplier<Block> ESCALERAS_DE_BARRO_COCIDO = stairs("escaleras_de_barro_cocido", BARRO_COCIDO);
+    public static final RegistrySupplier<Block> PARED_DE_BARRO_COCIDO = wall("pared_de_barro_cocido", BARRO_COCIDO);
     public static final RegistrySupplier<Block> PETATILLO = block("petatillo", BarroContent::barro);
     // Earth and stone
     public static final RegistrySupplier<Block> ADOBE = block("adobe", BarroContent::adobe);
+    public static final RegistrySupplier<Block> LOSA_DE_ADOBE = slab("losa_de_adobe", ADOBE);
+    public static final RegistrySupplier<Block> ESCALERAS_DE_ADOBE = stairs("escaleras_de_adobe", ADOBE);
+    public static final RegistrySupplier<Block> PARED_DE_ADOBE = wall("pared_de_adobe", ADOBE);
     public static final RegistrySupplier<Block> CANTERA = block("cantera", BarroContent::cantera);
+    public static final RegistrySupplier<Block> LOSA_DE_CANTERA = slab("losa_de_cantera", CANTERA);
+    public static final RegistrySupplier<Block> ESCALERAS_DE_CANTERA = stairs("escaleras_de_cantera", CANTERA);
+    public static final RegistrySupplier<Block> PARED_DE_CANTERA = wall("pared_de_cantera", CANTERA);
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder
@@ -99,10 +112,30 @@ public final class BarroContent {
                 .sound(SoundType.TUFF);
     }
 
-    // Registers a block plus its BlockItem. Since 1.21.2 both Properties need their registry key set before construction.
+    // Slab, stairs and wall copy their base block's properties with ofLegacyCopy, like vanilla does for these.
+    // It is deprecated, but ofFullCopy would also copy the base block's drops and description id.
+    private static RegistrySupplier<Block> slab(String name, RegistrySupplier<Block> base) {
+        return block(name, SlabBlock::new, () -> BlockBehaviour.Properties.ofLegacyCopy(base.get()));
+    }
+
+    // StairBlock's constructor is protected in 26.1.2, hence the anonymous subclass.
+    private static RegistrySupplier<Block> stairs(String name, RegistrySupplier<Block> base) {
+        return block(name, properties -> new StairBlock(base.get().defaultBlockState(), properties) {
+        }, () -> BlockBehaviour.Properties.ofLegacyCopy(base.get()));
+    }
+
+    private static RegistrySupplier<Block> wall(String name, RegistrySupplier<Block> base) {
+        return block(name, WallBlock::new, () -> BlockBehaviour.Properties.ofLegacyCopy(base.get()).forceSolidOn());
+    }
+
     private static RegistrySupplier<Block> block(String name, Supplier<BlockBehaviour.Properties> properties) {
+        return block(name, Block::new, properties);
+    }
+
+    // Registers a block plus its BlockItem. Since 1.21.2 both Properties need their registry key set before construction.
+    private static RegistrySupplier<Block> block(String name, Function<BlockBehaviour.Properties, Block> factory, Supplier<BlockBehaviour.Properties> properties) {
         Identifier id = Identifier.fromNamespaceAndPath(Barro.MOD_ID, name);
-        RegistrySupplier<Block> block = BLOCKS.register(id, () -> new Block(properties.get().setId(ResourceKey.create(Registries.BLOCK, id))));
+        RegistrySupplier<Block> block = BLOCKS.register(id, () -> factory.apply(properties.get().setId(ResourceKey.create(Registries.BLOCK, id))));
         ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).useBlockDescriptionPrefix()));
         return block;
     }

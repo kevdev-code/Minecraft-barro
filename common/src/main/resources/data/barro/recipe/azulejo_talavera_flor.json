@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "azulejo_talavera",
+  "key": {
+    "#": "minecraft:white_glazed_terracotta",
+    "X": "minecraft:blue_dye"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "barro:azulejo_talavera_flor"
+  }
+}

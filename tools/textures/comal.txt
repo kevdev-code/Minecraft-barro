@@ -1,0 +1,26 @@
+sym=full
+// smoked clay: the cooking face is charred (blackstone tones)
+d=4d3424
+m=7c4536
+b=8e3c2e
+l=9b5643
+h=a25326
+r=312c36
+D=160f10
+h=a25326
+b b m m m m b b b b b b b b b b
+b m r h h r m b b b b b b b b b
+m r h h h h r m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m r h h h h r m b b b b b b b b
+b m r h h r m b b b b b b b b b
+b b m m m m b b b b b b b b b b
+m m b l l h h h h h h l l b m m
+m m b l l h h h h h h l l b m m
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d

@@ -1,0 +1,26 @@
+sym=full
+// volcanic stone: basalt tones
+d=32333d
+m=3a3b48
+b=4f4b4f
+l=5c5c5c
+h=747474
+r=3a3b48
+D=1b2632
+h=747474
+b b m m m m b b b b b b b b b b
+b m r h h r m b b b b b b b b b
+m r h h h h r m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m r h h h h r m b b b b b b b b
+b m r h h r m b b b b b b b b b
+b b m m m m b b b b b b b b b b
+m m b l l h h h h h h l l b m m
+m m b l l h h h h h h l l b m m
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d

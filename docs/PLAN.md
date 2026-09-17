@@ -179,6 +179,26 @@ _Técnica: Blockbench de cero, hitbox propio._
 - `comal`
 - `molcajete`
 
+Los cuatro son objetos de piso con modelo y hitbox propios, sin rotación (son
+redondos o simétricos), hechos con `SmallDecorBlock`.
+
+- **Texturas tipo atlas:** cada una reparte el 16x16 en regiones y las caras del
+  modelo apuntan a la que les toca: el hueco de la vasija (anillos concéntricos)
+  arriba a la izquierda, material liso a su derecha, y abajo la franja de los
+  costados, sombreada de claro al centro a oscuro en los bordes para que el objeto se
+  lea redondo. La olla lleva banda pintada en cobalto y crema de la talavera.
+- **Siluetas:** la olla tiene panza, cuello y dos asas; el comal es un octágono bajo
+  con el borde levantado; el molcajete es un tazón octagonal con tres patas y su
+  tejolote dentro. El octágono se arma con dos cajas cruzadas.
+- **Iconos:** los modelos heredan `minecraft:block/block` (de ahí salen las
+  transformaciones de vista) y cada uno ajusta su `display.gui`: el comal se inclina
+  más para que se vea la plancha, y los chicos se agrandan un poco.
+- **Materiales:** la loza usa el sonido de la vasija decorada y se rompe a mano; un
+  pistón la destroza, como en vanilla. El molcajete es piedra volcánica: sonido de
+  basalto y dureza 1.5.
+- **Recetas:** cortapiedras. Barro cocido → maceta, olla o comal; basalto →
+  molcajete, que es piedra tallada.
+
 ### Fase 5 — Rotación direccional
 
 _Técnica: propiedad `facing` en el blockstate._
@@ -231,8 +251,8 @@ El último punto es el que se olvida. Compilar no es evidencia de que se vea bie
 - [ ] Definir si la creative tab agrupa todo o se separa por material
 - [x] Licencia: código MIT (`LICENSE`), arte con todos los derechos reservados
       (`LICENSE-ASSETS`). Ambos archivos van dentro de los jars
-- [ ] En la Fase 4, agregar los modelos de Blockbench a `LICENSE-ASSETS`: también
-      son arte y hoy la licencia solo nombra imágenes y specs de texturas
+- [x] `LICENSE-ASSETS` ya cubre los modelos con geometría propia (los que tienen
+      `elements`); los que solo heredan un padre quedan bajo MIT
 - [ ] Antes de publicar: descripción real del mod en `fabric.mod.json` y
       `neoforge.mods.toml` (sigue la de la plantilla), y quitar `"suggests":
       {"another-mod"}` de la plantilla

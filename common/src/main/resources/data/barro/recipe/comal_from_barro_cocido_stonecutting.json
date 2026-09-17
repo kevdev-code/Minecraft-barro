@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "barro:barro_cocido",
+  "result": {
+    "id": "barro:comal"
+  }
+}

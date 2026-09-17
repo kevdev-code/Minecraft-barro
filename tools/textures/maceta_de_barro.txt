@@ -1,0 +1,26 @@
+sym=full
+// fired clay: orange_terracotta, bricks, red_terracotta, brown_terracotta
+d=7c4536
+m=8e3c2e
+b=a25326
+l=b1624d
+h=c66851
+r=8e3c2e
+D=4d3424
+h=c66851
+b b m m m m b b b b b b b b b b
+b m r h h r m b b b b b b b b b
+m r h h h h r m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m h h D D h h m b b b b b b b b
+m r h h h h r m b b b b b b b b
+b m r h h r m b b b b b b b b b
+b b m m m m b b b b b b b b b b
+m m b l l h h h h h h l l b m m
+m m b l l h h h h h h l l b m m
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d
+d d m b b l l h h l l b b m d d
+d d m l b l l h h l l b l m d d

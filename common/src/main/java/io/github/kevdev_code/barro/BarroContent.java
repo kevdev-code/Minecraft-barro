@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public final class BarroContent {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Barro.MOD_ID, Registries.BLOCK);
@@ -74,6 +75,16 @@ public final class BarroContent {
             .sound(SoundType.WOOL)
             .ignitedByLava()
             .pushReaction(PushReaction.DESTROY));
+    // Pottery and stoneware, each with a model and a hitbox of its own
+    public static final RegistrySupplier<Block> MACETA_DE_BARRO = decor("maceta_de_barro", Block.box(3, 0, 3, 13, 10, 13), BarroContent::loza);
+    public static final RegistrySupplier<Block> OLLA_DE_BARRO = decor("olla_de_barro", Block.box(2, 0, 2, 14, 14, 14), BarroContent::loza);
+    public static final RegistrySupplier<Block> COMAL = decor("comal", Block.box(1, 0, 1, 15, 2, 15), BarroContent::loza);
+    public static final RegistrySupplier<Block> MOLCAJETE = decor("molcajete", Block.box(3, 0, 3, 13, 7, 13), () -> BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .strength(1.5F)
+            .sound(SoundType.BASALT)
+            .noOcclusion());
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder
@@ -126,6 +137,20 @@ public final class BarroContent {
                 .requiresCorrectToolForDrops()
                 .strength(1.5F, 6.0F)
                 .sound(SoundType.TUFF);
+    }
+
+    // Fired pottery: breaks by hand, and a piston smashes it like vanilla's decorated pot.
+    private static BlockBehaviour.Properties loza() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_ORANGE)
+                .strength(0.5F)
+                .sound(SoundType.DECORATED_POT)
+                .pushReaction(PushReaction.DESTROY)
+                .noOcclusion();
+    }
+
+    private static RegistrySupplier<Block> decor(String name, VoxelShape shape, Supplier<BlockBehaviour.Properties> properties) {
+        return block(name, props -> new SmallDecorBlock(shape, props), properties);
     }
 
     // Slab, stairs and wall copy their base block's properties with ofLegacyCopy, like vanilla does for these.

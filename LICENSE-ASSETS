@@ -9,3 +9,6 @@ packs and forks, without prior written permission from the copyright holder:
 - Every image file under common/src/main/resources/assets/barro/, including block
   textures and the mod icon.
 - The texture designs in tools/textures/*.txt, except pal.txt.
+- Every block model that defines its own geometry, that is, any file under
+  common/src/main/resources/assets/barro/models/ with an "elements" list. Models that
+  only set a parent and a texture are covered by the MIT license in LICENSE.

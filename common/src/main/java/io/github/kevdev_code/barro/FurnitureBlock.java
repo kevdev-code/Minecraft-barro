@@ -5,8 +5,13 @@ import java.util.Map;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -23,11 +28,28 @@ public class FurnitureBlock extends Block {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     private final Map<Direction, VoxelShape> shapes = new EnumMap<>(Direction.class);
+    private final double seatHeight;
 
-    public FurnitureBlock(VoxelShape northShape, Properties properties) {
+    public FurnitureBlock(VoxelShape northShape, double seatHeight, Properties properties) {
         super(properties);
+        this.seatHeight = seatHeight;
         for (Direction facing : Direction.Plane.HORIZONTAL) shapes.put(facing, turn(northShape, facing));
         registerDefaultState(stateDefinition.any().setValue(FACING, Direction.NORTH));
+    }
+
+    // Right click with an empty hand to sit down. Sneak to get up, the way any vehicle works.
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (seatHeight <= 0 || player.isPassenger() || player.isShiftKeyDown()) return InteractionResult.PASS;
+        if (!level.isClientSide()) {
+            if (!level.getEntitiesOfClass(AsientoEntity.class, new AABB(pos)).isEmpty())
+                return InteractionResult.PASS;   // someone is already sitting here
+            AsientoEntity seat = new AsientoEntity(BarroContent.ASIENTO.get(), level);
+            seat.setPos(pos.getX() + 0.5, pos.getY() + seatHeight, pos.getZ() + 0.5);
+            level.addFreshEntity(seat);
+            player.startRiding(seat);
+        }
+        return InteractionResult.SUCCESS;
     }
 
     // Rotates a shape around the centre of the block, one quarter turn at a time.

@@ -10,6 +10,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
@@ -32,6 +34,18 @@ public final class BarroContent {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Barro.MOD_ID, Registries.BLOCK);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Barro.MOD_ID, Registries.ITEM);
     private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Barro.MOD_ID, Registries.CREATIVE_MODE_TAB);
+    private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(Barro.MOD_ID, Registries.ENTITY_TYPE);
+
+    // The invisible seat a chair mounts the player on. Never saved, never spawnable by hand.
+    public static final RegistrySupplier<EntityType<AsientoEntity>> ASIENTO = ENTITIES.register("asiento", () -> EntityType.Builder
+            .of(AsientoEntity::new, MobCategory.MISC)
+            .sized(0.001F, 0.001F)
+            // No noSave() here: startRiding refuses a vehicle whose type cannot be serialized.
+            // AsientoEntity.shouldBeSaved() is what actually keeps seats out of the save file.
+            .noSummon()
+            .clientTrackingRange(8)
+            .updateInterval(4)
+            .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Barro.MOD_ID, "asiento"))));
 
     // Registration order is creative tab order.
     // Talavera patterns
@@ -87,10 +101,11 @@ public final class BarroContent {
             .sound(SoundType.BASALT)
             .noOcclusion());
     // Patio furniture, turned to face whoever places it
+    // The second number is the seat height: where a player sits when they right click it.
     public static final RegistrySupplier<Block> EQUIPAL = block("equipal",
-            props -> new FurnitureBlock(Block.box(2, 0, 2, 14, 15, 14), props), BarroContent::madera);
+            props -> new FurnitureBlock(Block.box(2, 0, 2, 14, 15, 14), 0.45, props), BarroContent::madera);
     public static final RegistrySupplier<Block> BANCA_DE_MADERA = block("banca_de_madera",
-            props -> new FurnitureBlock(Block.box(0, 0, 4, 16, 15, 12), props), BarroContent::madera);
+            props -> new FurnitureBlock(Block.box(0, 0, 4, 16, 15, 12), 0.45, props), BarroContent::madera);
     public static final RegistrySupplier<Block> MESA_DE_MADERA = decor("mesa_de_madera",
             Shapes.or(Block.box(0, 12, 0, 16, 16, 16),
                     Block.box(1, 0, 1, 3, 12, 3), Block.box(13, 0, 1, 15, 12, 3),
@@ -110,6 +125,7 @@ public final class BarroContent {
         BLOCKS.register();
         ITEMS.register();
         TABS.register();
+        ENTITIES.register();
     }
 
     // Vanilla glazed terracotta properties, minus PUSH_ONLY: that is a glazed-terracotta mechanic, not a tile trait.

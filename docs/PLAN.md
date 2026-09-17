@@ -33,7 +33,8 @@ sin que se vea pegado con cinta.
 **Fuera (explícitamente):**
 
 - Block entities, inventarios, GUIs
-- Entidades, mobs, monturas (incluye "sentarse en la silla")
+- Entidades y mobs, salvo la entidad invisible del asiento (ver Fase 5): sentarse en
+  el equipal y la banca sí entró a la v1, por decisión posterior a este plan
 - Generación de mundo, dimensiones, biomas
 - Mecánicas nuevas de cualquier tipo
 - Mixins
@@ -218,6 +219,16 @@ _Técnica: propiedad `facing` en el blockstate._
 - **La mesa no rota:** es simétrica, así que no lleva `facing`.
 - **Recetas:** equipal 2 cueros sobre 2 tablas; banca 3 tablas sobre 2 palos; mesa 3
   tablas sobre dos filas de palos. Verifiqué que ninguna choque con vanilla.
+- **Sentarse:** clic derecho con la mano vacía en el equipal o la banca. Minecraft no
+  tiene "sentarse", así que la silla crea una entidad invisible (`AsientoEntity`) y
+  monta al jugador en ella, como una barca; para pararse se agacha uno. La entidad no
+  se guarda nunca y se borra sola al quedar vacía o si desaparece el mueble, así que
+  un mundo recargado no acumula asientos sueltos. La altura del asiento es un número
+  por mueble. La mesa no lleva asiento.
+- **Primer código por cargador:** Architectury no tiene registro de renderizadores de
+  entidades, así que cada plataforma registra el suyo. En Fabric se usa el método de
+  vanilla, que su parche de acceso deja público; en NeoForge, un evento en una clase
+  aparte que solo se carga en cliente.
 
 ### Fase 6 — Estados múltiples
 
@@ -273,7 +284,7 @@ El último punto es el que se olvida. Compilar no es evidencia de que se vea bie
 
 Ideas descartadas de la v1, no olvidadas:
 
-- Sillas donde el jugador se pueda sentar (requiere entidad de montura)
+- ~~Sillas donde el jugador se pueda sentar~~ (hecho en la Fase 5)
 - Bloque de fermentación / curado con progreso (requiere block entity)
 - Talavera teñible con los 16 colores
 - Herrería de patio: rejas, faroles, barandales

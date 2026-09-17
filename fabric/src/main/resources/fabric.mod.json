@@ -22,14 +22,11 @@
       "io.github.kevdev_code.barro.fabric.client.BarroFabricClient"
     ]
   },
-  "mixins": [
-    "barro.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.19.5",
     "minecraft": "~26.1.2",
     "java": ">=25",
-    "architectury": ">=20.1.14",
+    "architectury": ">=20.0.12",
     "fabric-api": "*"
   },
   "suggests": {

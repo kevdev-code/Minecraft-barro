@@ -95,6 +95,20 @@ _Técnica: blockstate mínimo, puro trabajo de textura._
 **Primero un solo patrón de talavera, de punta a punta.** Tiene que cumplir toda la
 lista de "terminado" (sección 6) y estar verificado en Fabric y en NeoForge antes de
 texturizar otro patrón o material. Hasta entonces no se sabe cuánto cuesta una pieza.
+(Hecho con `flor`.)
+
+**Patrones de talavera:** `flor`, `estrella`, `rombos`, `hojas`, `cruz`, `sol`,
+`medallon`, `cenefa`.
+
+- **Paleta:** solo los seis colores de la talavera poblana (azul, amarillo, naranja,
+  verde, malva y negro) sobre el mismo esmalte crema. Cada color sale de la terracota
+  vidriada de vanilla correspondiente.
+- **Simetría:** todos los patrones son simétricos, así que no necesitan `facing`. Un
+  patrón asimétrico espera a la Fase 5.
+- **Recetas:** `flor` se craftea (8 terracota vidriada blanca + tinte azul → 8). Todos
+  los patrones, incluida `flor`, salen del cortapiedras a partir de cualquier azulejo
+  del tag `barro:azulejos_talavera`. Un patrón nuevo solo necesita entrar al tag y
+  tener su receta de cortapiedras.
 
 ### Fase 2 — Variantes derivadas
 

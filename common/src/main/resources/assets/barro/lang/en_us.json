@@ -1,4 +1,11 @@
 {
   "itemGroup.barro": "Barro",
-  "block.barro.azulejo_talavera_flor": "Talavera Tile (Flower)"
+  "block.barro.azulejo_talavera_flor": "Talavera Tile (Flower)",
+  "block.barro.azulejo_talavera_estrella": "Talavera Tile (Star)",
+  "block.barro.azulejo_talavera_rombos": "Talavera Tile (Diamonds)",
+  "block.barro.azulejo_talavera_hojas": "Talavera Tile (Leaves)",
+  "block.barro.azulejo_talavera_cruz": "Talavera Tile (Cross)",
+  "block.barro.azulejo_talavera_sol": "Talavera Tile (Sun)",
+  "block.barro.azulejo_talavera_medallon": "Talavera Tile (Medallion)",
+  "block.barro.azulejo_talavera_cenefa": "Talavera Tile (Border)"
 }

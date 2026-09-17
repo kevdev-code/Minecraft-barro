@@ -23,12 +23,15 @@ public final class BarroContent {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Barro.MOD_ID, Registries.ITEM);
     private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Barro.MOD_ID, Registries.CREATIVE_MODE_TAB);
 
-    // Vanilla glazed terracotta properties, minus PUSH_ONLY: that is a glazed-terracotta mechanic, not a tile trait.
-    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_FLOR = block("azulejo_talavera_flor", () -> BlockBehaviour.Properties.of()
-            .mapColor(DyeColor.WHITE)
-            .instrument(NoteBlockInstrument.BASEDRUM)
-            .requiresCorrectToolForDrops()
-            .strength(1.4F));
+    // Talavera patterns. Registration order is creative tab order.
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_FLOR = block("azulejo_talavera_flor", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_ESTRELLA = block("azulejo_talavera_estrella", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_ROMBOS = block("azulejo_talavera_rombos", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_HOJAS = block("azulejo_talavera_hojas", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_CRUZ = block("azulejo_talavera_cruz", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_SOL = block("azulejo_talavera_sol", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_MEDALLON = block("azulejo_talavera_medallon", BarroContent::talavera);
+    public static final RegistrySupplier<Block> AZULEJO_TALAVERA_CENEFA = block("azulejo_talavera_cenefa", BarroContent::talavera);
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder
@@ -43,6 +46,15 @@ public final class BarroContent {
         BLOCKS.register();
         ITEMS.register();
         TABS.register();
+    }
+
+    // Vanilla glazed terracotta properties, minus PUSH_ONLY: that is a glazed-terracotta mechanic, not a tile trait.
+    private static BlockBehaviour.Properties talavera() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(DyeColor.WHITE)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(1.4F);
     }
 
     // Registers a block plus its BlockItem. Since 1.21.2 both Properties need their registry key set before construction.

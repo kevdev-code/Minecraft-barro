@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.example.mixin",
+  "package": "io.github.kevdev_code.barro.mixin",
   "compatibilityLevel": "JAVA_25",
   "minVersion": "0.8",
   "client": [

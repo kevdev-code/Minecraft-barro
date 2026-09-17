@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'example_mod'
+rootProject.name = 'barro'
 
 include 'common'
 include 'fabric'

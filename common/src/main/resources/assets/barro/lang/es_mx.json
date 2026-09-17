@@ -12,5 +12,7 @@
   "block.barro.azulejo_talavera_liso_amarillo": "Azulejo de talavera liso amarillo",
   "block.barro.azulejo_talavera_liso_verde": "Azulejo de talavera liso verde",
   "block.barro.barro_cocido": "Barro cocido",
-  "block.barro.petatillo": "Petatillo"
+  "block.barro.petatillo": "Petatillo",
+  "block.barro.adobe": "Adobe",
+  "block.barro.cantera": "Cantera"
 }

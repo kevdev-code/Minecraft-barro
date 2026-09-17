@@ -12,5 +12,7 @@
   "block.barro.azulejo_talavera_liso_amarillo": "Plain Yellow Talavera Tile",
   "block.barro.azulejo_talavera_liso_verde": "Plain Green Talavera Tile",
   "block.barro.barro_cocido": "Fired Clay",
-  "block.barro.petatillo": "Petatillo Floor"
+  "block.barro.petatillo": "Petatillo Floor",
+  "block.barro.adobe": "Adobe",
+  "block.barro.cantera": "Cantera Stone"
 }

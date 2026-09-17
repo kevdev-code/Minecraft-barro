@@ -15,6 +15,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -41,6 +42,9 @@ public final class BarroContent {
     // Fired clay
     public static final RegistrySupplier<Block> BARRO_COCIDO = block("barro_cocido", BarroContent::barro);
     public static final RegistrySupplier<Block> PETATILLO = block("petatillo", BarroContent::barro);
+    // Earth and stone
+    public static final RegistrySupplier<Block> ADOBE = block("adobe", BarroContent::adobe);
+    public static final RegistrySupplier<Block> CANTERA = block("cantera", BarroContent::cantera);
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder
@@ -73,6 +77,26 @@ public final class BarroContent {
                 .instrument(NoteBlockInstrument.BASEDRUM)
                 .requiresCorrectToolForDrops()
                 .strength(1.25F, 4.2F);
+    }
+
+    // Vanilla mud bricks properties, with an earth map color.
+    private static BlockBehaviour.Properties adobe() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(MapColor.DIRT)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(1.5F, 3.0F)
+                .sound(SoundType.MUD_BRICKS);
+    }
+
+    // Vanilla tuff properties (cantera is volcanic tuff), with a pink map color.
+    private static BlockBehaviour.Properties cantera() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(MapColor.TERRACOTTA_WHITE)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(1.5F, 6.0F)
+                .sound(SoundType.TUFF);
     }
 
     // Registers a block plus its BlockItem. Since 1.21.2 both Properties need their registry key set before construction.

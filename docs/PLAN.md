@@ -117,6 +117,14 @@ dos tienen las propiedades de la terracota de vanilla. Recetas: 2x2 terracota �
 `barro_cocido` y 2x2 `barro_cocido` → 4 `petatillo`, cada una también en el
 cortapiedras.
 
+**Adobe:** bloques grandes de tierra con paja, en dos hiladas cuatrapeadas. Más claro
+y cálido que los ladrillos de lodo de vanilla, con sus propiedades y su sonido.
+Receta: lodo y trigo en diagonal (2x2) → 2, porque el adobe es barro con paja.
+
+**Cantera:** cantera rosa, un sillar labrado por bloque con junta fina. Grano de
+toba con los rosas del granito, y las propiedades y el sonido de la toba (la cantera
+es toba volcánica). Receta: 8 toba + tinte rosa → 8.
+
 ### Fase 2 — Variantes derivadas
 
 _Técnica: modelos heredados. Muy poco esfuerzo, mucho valor de construcción._

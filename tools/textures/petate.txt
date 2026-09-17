@@ -1,0 +1,22 @@
+sym=full
+// palm weave: bamboo_planks straw tones
+l=e3cc6a
+m=d9c25e
+n=c8b14d
+d=998741
+l l l d m d n d l l l d m d n d
+m m m d m d n d m m m d m d n d
+n n n d m d n d n n n d m d n d
+d d d d m d n d d d d d m d n d
+m d n d l l l d m d n d l l l d
+m d n d m m m d m d n d m m m d
+m d n d n n n d m d n d n n n d
+m d n d d d d d m d n d d d d d
+l l l d m d n d l l l d m d n d
+m m m d m d n d m m m d m d n d
+n n n d m d n d n n n d m d n d
+d d d d m d n d d d d d m d n d
+m d n d l l l d m d n d l l l d
+m d n d m m m d m d n d m m m d
+m d n d n n n d m d n d n n n d
+m d n d d d d d m d n d d d d d

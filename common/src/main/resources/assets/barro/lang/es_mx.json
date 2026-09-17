@@ -23,5 +23,7 @@
   "block.barro.cantera": "Cantera",
   "block.barro.losa_de_cantera": "Losa de cantera",
   "block.barro.escaleras_de_cantera": "Escaleras de cantera",
-  "block.barro.pared_de_cantera": "Pared de cantera"
+  "block.barro.pared_de_cantera": "Pared de cantera",
+  "block.barro.petate": "Petate",
+  "block.barro.papel_picado": "Papel picado"
 }

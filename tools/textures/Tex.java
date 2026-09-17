@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  *                                 full:    16 rows of 16
  *   noise=<seed> <blur>           seeded noise for '.' cells, box-blurred <blur> times with wraparound so it tiles
  *   ~<weight>=<rrggbb>            noise colors from lowest to highest noise, sharing the tile by weight
- *   X=<rrggbb>                    palette letter
+ *   X=<rrggbb>                    palette letter ('.' is noise, '_' is transparent)
  *   // comment
  */
 public class Tex {
@@ -86,7 +86,9 @@ public class Tex {
             throw new IllegalStateException(name + ": expected sym= and " + n + " rows of " + n + " cells, got " + rows);
         int[][] noise = noiseColors.isEmpty() ? null : noise(seed, blur, noiseColors);
 
-        BufferedImage out = new BufferedImage(16, 16, BufferedImage.TYPE_INT_RGB);
+        // '_' is a transparent cell; the game picks the cutout layer from the texture itself, so nothing else declares it.
+        boolean transparent = rows.stream().anyMatch(row -> row.indexOf('_') >= 0);
+        BufferedImage out = new BufferedImage(16, 16, transparent ? BufferedImage.TYPE_INT_ARGB : BufferedImage.TYPE_INT_RGB);
         for (int y = 0; y < 16; y++) {
             for (int x = 0; x < 16; x++) {
                 int r;
@@ -107,9 +109,10 @@ public class Tex {
                     default -> throw new IllegalStateException(name + ": unknown sym " + sym);
                 }
                 char cell = rows.get(r).charAt(c);
+                if (cell == '_') continue;
                 Integer color = cell == '.' ? (noise == null ? null : noise[y][x]) : palette.get(cell);
                 if (color == null) throw new IllegalStateException(name + ": no color for '" + cell + "'");
-                out.setRGB(x, y, color);
+                out.setRGB(x, y, 0xFF000000 | color);
             }
         }
         return out;
@@ -161,8 +164,11 @@ public class Tex {
         for (int i = 0; i < count; i++) {
             BufferedImage img = ImageIO.read(new File(args[4 + i]));
             for (int y = 0; y < cell; y++)
-                for (int x = 0; x < cell; x++)
-                    out.setRGB(i * (cell + gap) + x, y, img.getRGB((x / scale) % 16, (y / scale) % 16));
+                for (int x = 0; x < cell; x++) {
+                    int argb = img.getRGB((x / scale) % 16, (y / scale) % 16);
+                    // Show transparency as sky, the way a hanging texture reads in game.
+                    out.setRGB(i * (cell + gap) + x, y, (argb >>> 24) == 0 ? 0x7FB2E5 : argb);
+                }
         }
         ImageIO.write(out, "png", new File(args[1]));
     }

@@ -16,6 +16,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -23,6 +24,7 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 public final class BarroContent {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Barro.MOD_ID, Registries.BLOCK);
@@ -58,6 +60,20 @@ public final class BarroContent {
     public static final RegistrySupplier<Block> LOSA_DE_CANTERA = slab("losa_de_cantera", CANTERA);
     public static final RegistrySupplier<Block> ESCALERAS_DE_CANTERA = stairs("escaleras_de_cantera", CANTERA);
     public static final RegistrySupplier<Block> PARED_DE_CANTERA = wall("pared_de_cantera", CANTERA);
+    // Woven palm and cut paper
+    public static final RegistrySupplier<Block> PETATE = block("petate", CarpetBlock::new, () -> BlockBehaviour.Properties.of()
+            .mapColor(MapColor.SAND)
+            .strength(0.1F)
+            .sound(SoundType.GRASS)
+            .ignitedByLava());
+    public static final RegistrySupplier<Block> PAPEL_PICADO = block("papel_picado", PapelPicadoBlock::new, () -> BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_MAGENTA)
+            .instabreak()
+            .noCollision()
+            .noOcclusion()
+            .sound(SoundType.WOOL)
+            .ignitedByLava()
+            .pushReaction(PushReaction.DESTROY));
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder

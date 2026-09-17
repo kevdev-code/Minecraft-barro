@@ -1,0 +1,120 @@
+{
+  "variants": {
+    "attached=false,facing=east,sag=0": {
+      "model": "barro:block/papel_picado_sag0",
+      "y": 90
+    },
+    "attached=false,facing=east,sag=1": {
+      "model": "barro:block/papel_picado_sag1",
+      "y": 90
+    },
+    "attached=false,facing=east,sag=2": {
+      "model": "barro:block/papel_picado_sag2",
+      "y": 90
+    },
+    "attached=false,facing=east,sag=3": {
+      "model": "barro:block/papel_picado_sag3",
+      "y": 90
+    },
+    "attached=false,facing=north,sag=0": {
+      "model": "barro:block/papel_picado_sag0"
+    },
+    "attached=false,facing=north,sag=1": {
+      "model": "barro:block/papel_picado_sag1"
+    },
+    "attached=false,facing=north,sag=2": {
+      "model": "barro:block/papel_picado_sag2"
+    },
+    "attached=false,facing=north,sag=3": {
+      "model": "barro:block/papel_picado_sag3"
+    },
+    "attached=false,facing=south,sag=0": {
+      "model": "barro:block/papel_picado_sag0"
+    },
+    "attached=false,facing=south,sag=1": {
+      "model": "barro:block/papel_picado_sag1"
+    },
+    "attached=false,facing=south,sag=2": {
+      "model": "barro:block/papel_picado_sag2"
+    },
+    "attached=false,facing=south,sag=3": {
+      "model": "barro:block/papel_picado_sag3"
+    },
+    "attached=false,facing=west,sag=0": {
+      "model": "barro:block/papel_picado_sag0",
+      "y": 90
+    },
+    "attached=false,facing=west,sag=1": {
+      "model": "barro:block/papel_picado_sag1",
+      "y": 90
+    },
+    "attached=false,facing=west,sag=2": {
+      "model": "barro:block/papel_picado_sag2",
+      "y": 90
+    },
+    "attached=false,facing=west,sag=3": {
+      "model": "barro:block/papel_picado_sag3",
+      "y": 90
+    },
+    "attached=true,facing=east,sag=0": {
+      "model": "barro:block/papel_picado_wall_sag0",
+      "y": 90
+    },
+    "attached=true,facing=east,sag=1": {
+      "model": "barro:block/papel_picado_wall_sag1",
+      "y": 90
+    },
+    "attached=true,facing=east,sag=2": {
+      "model": "barro:block/papel_picado_wall_sag2",
+      "y": 90
+    },
+    "attached=true,facing=east,sag=3": {
+      "model": "barro:block/papel_picado_wall_sag3",
+      "y": 90
+    },
+    "attached=true,facing=north,sag=0": {
+      "model": "barro:block/papel_picado_wall_sag0"
+    },
+    "attached=true,facing=north,sag=1": {
+      "model": "barro:block/papel_picado_wall_sag1"
+    },
+    "attached=true,facing=north,sag=2": {
+      "model": "barro:block/papel_picado_wall_sag2"
+    },
+    "attached=true,facing=north,sag=3": {
+      "model": "barro:block/papel_picado_wall_sag3"
+    },
+    "attached=true,facing=south,sag=0": {
+      "model": "barro:block/papel_picado_wall_sag0",
+      "y": 180
+    },
+    "attached=true,facing=south,sag=1": {
+      "model": "barro:block/papel_picado_wall_sag1",
+      "y": 180
+    },
+    "attached=true,facing=south,sag=2": {
+      "model": "barro:block/papel_picado_wall_sag2",
+      "y": 180
+    },
+    "attached=true,facing=south,sag=3": {
+      "model": "barro:block/papel_picado_wall_sag3",
+      "y": 180
+    },
+    "attached=true,facing=west,sag=0": {
+      "model": "barro:block/papel_picado_wall_sag0",
+      "y": 270
+    },
+    "attached=true,facing=west,sag=1": {
+      "model": "barro:block/papel_picado_wall_sag1",
+      "y": 270
+    },
+    "attached=true,facing=west,sag=2": {
+      "model": "barro:block/papel_picado_wall_sag2",
+      "y": 270
+    },
+    "attached=true,facing=west,sag=3": {
+      "model": "barro:block/papel_picado_wall_sag3",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,21 @@
+sym=full
+// cord: bamboo_planks; flags: magenta_concrete, lime_concrete
+C=907e3a
+A=a9309f
+B=5ea918
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C C C C C C C C C C C C C C C C
+A A A A A A A _ B B B B B B B _
+A _ A A A _ A _ B _ B B B _ B _
+A A _ A _ A A _ B B _ B _ B B _
+A _ A A A _ A _ B _ B B B _ B _
+A A A _ A A A _ B B B _ B B B _
+A _ A A A _ A _ B _ B B B _ B _
+A A _ A _ A A _ B B _ B _ B B _
+A _ A A A _ A _ B _ B B B _ B _
+A A A A A A A _ B B B B B B B _
+_ A A A A A _ _ _ B B B B B _ _
+_ _ A A A _ _ _ _ _ B B B _ _ _
+_ _ _ A _ _ _ _ _ _ _ B _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _

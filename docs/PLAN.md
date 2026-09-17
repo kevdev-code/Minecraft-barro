@@ -154,6 +154,22 @@ _Técnica: modelos no cúbicos, rotación por blockstate._
 - `petate` (tapete)
 - `papel_picado` (colgante)
 
+- **Petate:** tapete de palma tejida, con el `CarpetBlock` de vanilla (alto de 1 px,
+  se rompe a mano, arde). Receta: 2x2 de caña de azúcar → 4.
+- **Papel picado:** tira colgante con dos modelos planos propios y las propiedades
+  `facing` y `attached`. Contra la cara de un bloque firme queda pegado a esa pared;
+  en cualquier otro lado cuelga al centro de su bloque, mirando a quien lo coloca, de
+  modo que una fila se lee como una sola tira. Sin colisión y se rompe de un golpe.
+  No exige soporte: si quitas la pared, el papel se queda pegado en el aire.
+  Receta: 3 hilos, 1 papel y los tintes de los dos colores de los banderines → 3.
+- **Caída (`sag`):** cada segmento cuenta hasta 3 vecinos iguales de cada lado y baja
+  según el menor de los dos, 1.5 px por nivel. Los extremos quedan arriba y el centro
+  abajo, así que la tira cuelga en curva y la curva crece con el tendido. Esto usa la
+  técnica de la Fase 6 (blockstates que reaccionan a vecinos), adelantada a petición.
+- **Transparencia:** en 26.1 no se registra en código. El juego elige la capa de
+  recorte según el alfa de la textura, y el modelo solo puede forzar translucidez con
+  `force_translucent`. Por eso el papel picado no necesita nada del lado del cliente.
+
 ### Fase 4 — Primer modelo propio
 
 _Técnica: Blockbench de cero, hitbox propio._

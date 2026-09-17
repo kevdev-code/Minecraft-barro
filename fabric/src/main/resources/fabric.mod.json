@@ -3,7 +3,7 @@
   "id": "barro",
   "version": "${version}",
   "name": "Barro",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Building blocks from Mexican architecture and crafts: Talavera tiles, fired clay, petatillo floors, adobe and cantera stone, in a palette taken from vanilla.",
   "authors": [
     "kevdev-code"
   ],
@@ -31,8 +31,5 @@
     "java": ">=25",
     "architectury": ">=20.0.12",
     "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

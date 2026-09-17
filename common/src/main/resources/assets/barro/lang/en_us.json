@@ -23,5 +23,7 @@
   "block.barro.cantera": "Cantera Stone",
   "block.barro.losa_de_cantera": "Cantera Stone Slab",
   "block.barro.escaleras_de_cantera": "Cantera Stone Stairs",
-  "block.barro.pared_de_cantera": "Cantera Stone Wall"
+  "block.barro.pared_de_cantera": "Cantera Stone Wall",
+  "block.barro.petate": "Petate Mat",
+  "block.barro.papel_picado": "Papel Picado"
 }

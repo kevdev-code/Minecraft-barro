@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Barro"
 authors = "kevdev-code"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Building blocks from Mexican architecture and crafts: Talavera tiles, fired clay, petatillo floors, adobe and cantera stone, in a palette taken from vanilla.
 '''
 #logoFile = ""
 

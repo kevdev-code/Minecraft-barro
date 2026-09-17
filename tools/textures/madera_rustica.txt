@@ -1,0 +1,24 @@
+sym=full
+// rustic pine boards: oak_planks tones, wide boards with a knot
+d=67502c
+s=7e6237
+m=967441
+b=9f844d
+l=af8f55
+h=c29d62
+b l h l b h l b h l b l h b l h
+l h l b h l b h l h b h l b h l
+b h l h b l h b l b h l b h l b
+d d s d d d s d d s d d d s d d
+h l b h l b h l b h l b h l b h
+l b h l m m b h l b h l b h l b
+b h l b m m h l b h l b h l b h
+d s d d d s d d d s d d s d d d
+l b h l b h l b h l b h l b h l
+h l b h l b h l b h l b h l b h
+b h l b h l b h l b h l b h l b
+d d s d d s d d d s d d d s d d
+h l b h l b h l b h l b h l b h
+l b h l b h l b m m l b h l b h
+b h l b h l b h m m h l b h l b
+d s d d d s d d s d d d s d d d

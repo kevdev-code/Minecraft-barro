@@ -1,0 +1,28 @@
+sym=full
+// top half: pigskin leather (leather item tones); bottom half: the woven wood staves of the base
+k=542716
+n=893b25
+c=9e492a
+t=c65c35
+u=d76b43
+d=67502c
+s=7e6237
+b=9f844d
+l=af8f55
+h=c29d62
+n n n n n n n n n n n n n n n n
+n t t u t t t u t t u t t t t n
+n t u t t u t t t u t t u t t n
+n u t t t t u t t t t u t t u n
+n t t u t t t t u t t t t u t n
+n t u t t u t t t t u t t t t n
+n t t t t t t u t t t u t t u n
+n c c c c c c c c c c c c c c n
+s h l b s h l b s h l b s h l b
+s h l b s h l b s h l b s h l b
+s h l b s h l b s h l b s h l b
+d d d d d d d d d d d d d d d d
+s b l h s b l h s b l h s b l h
+s b l h s b l h s b l h s b l h
+s b l h s b l h s b l h s b l h
+d s d s d s d s d s d s d s d s

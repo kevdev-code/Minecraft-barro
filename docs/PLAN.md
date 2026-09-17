@@ -207,6 +207,18 @@ _Técnica: propiedad `facing` en el blockstate._
 - `banca_de_madera`
 - `mesa_de_madera`
 
+- **Rotación:** `FurnitureBlock` guarda `facing` y gira hacia quien coloca. Las formas
+  se dibujan mirando al norte y el bloque las voltea solo para las otras tres
+  direcciones, así no hay que escribir cuatro veces lo mismo.
+- **Equipal:** base redonda de varas tejidas (octágono de tres piezas), asiento y
+  respaldo de cuero. La textura reparte cuero arriba y varas abajo.
+- **Banca y mesa:** comparten la textura `madera_rustica`. El asiento de la banca y la
+  cubierta de la mesa ocupan todo el bloque, así que en fila se leen como una sola
+  banca o una sola mesa, sin necesidad de estados de conexión.
+- **La mesa no rota:** es simétrica, así que no lleva `facing`.
+- **Recetas:** equipal 2 cueros sobre 2 tablas; banca 3 tablas sobre 2 palos; mesa 3
+  tablas sobre dos filas de palos. Verifiqué que ninguna choque con vanilla.
+
 ### Fase 6 — Estados múltiples
 
 _Técnica: blockstates que reaccionan a bloques vecinos._

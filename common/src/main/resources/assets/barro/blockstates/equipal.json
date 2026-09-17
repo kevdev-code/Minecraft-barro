@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "barro:block/equipal"
+    },
+    "facing=east": {
+      "model": "barro:block/equipal",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "barro:block/equipal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "barro:block/equipal",
+      "y": 270
+    }
+  }
+}

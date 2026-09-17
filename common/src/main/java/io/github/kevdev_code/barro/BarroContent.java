@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public final class BarroContent {
@@ -85,6 +86,16 @@ public final class BarroContent {
             .strength(1.5F)
             .sound(SoundType.BASALT)
             .noOcclusion());
+    // Patio furniture, turned to face whoever places it
+    public static final RegistrySupplier<Block> EQUIPAL = block("equipal",
+            props -> new FurnitureBlock(Block.box(2, 0, 2, 14, 15, 14), props), BarroContent::madera);
+    public static final RegistrySupplier<Block> BANCA_DE_MADERA = block("banca_de_madera",
+            props -> new FurnitureBlock(Block.box(0, 0, 4, 16, 15, 12), props), BarroContent::madera);
+    public static final RegistrySupplier<Block> MESA_DE_MADERA = decor("mesa_de_madera",
+            Shapes.or(Block.box(0, 12, 0, 16, 16, 16),
+                    Block.box(1, 0, 1, 3, 12, 3), Block.box(13, 0, 1, 15, 12, 3),
+                    Block.box(1, 0, 13, 3, 12, 15), Block.box(13, 0, 13, 15, 12, 15)),
+            BarroContent::madera);
 
     // Lists everything in ITEMS in registration order, so new blocks appear without touching the tab.
     public static final RegistrySupplier<CreativeModeTab> TAB = TABS.register("barro", () -> CreativeTabRegistry.create(builder -> builder
@@ -146,6 +157,17 @@ public final class BarroContent {
                 .strength(0.5F)
                 .sound(SoundType.DECORATED_POT)
                 .pushReaction(PushReaction.DESTROY)
+                .noOcclusion();
+    }
+
+    // Vanilla plank properties.
+    private static BlockBehaviour.Properties madera() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(MapColor.WOOD)
+                .instrument(NoteBlockInstrument.BASS)
+                .strength(2.0F, 3.0F)
+                .sound(SoundType.WOOD)
+                .ignitedByLava()
                 .noOcclusion();
     }
 

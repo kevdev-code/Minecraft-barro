@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "barro:block/banca_de_madera"
+    },
+    "facing=east": {
+      "model": "barro:block/banca_de_madera",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "barro:block/banca_de_madera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "barro:block/banca_de_madera",
+      "y": 270
+    }
+  }
+}

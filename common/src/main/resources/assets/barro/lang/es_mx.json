@@ -29,5 +29,8 @@
   "block.barro.maceta_de_barro": "Maceta de barro",
   "block.barro.olla_de_barro": "Olla de barro",
   "block.barro.comal": "Comal",
-  "block.barro.molcajete": "Molcajete"
+  "block.barro.molcajete": "Molcajete",
+  "block.barro.equipal": "Equipal",
+  "block.barro.banca_de_madera": "Banca de madera",
+  "block.barro.mesa_de_madera": "Mesa de madera"
 }

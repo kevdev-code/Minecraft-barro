@@ -29,5 +29,8 @@
   "block.barro.maceta_de_barro": "Clay Planter",
   "block.barro.olla_de_barro": "Clay Olla",
   "block.barro.comal": "Comal Griddle",
-  "block.barro.molcajete": "Molcajete"
+  "block.barro.molcajete": "Molcajete",
+  "block.barro.equipal": "Equipal Chair",
+  "block.barro.banca_de_madera": "Wooden Bench",
+  "block.barro.mesa_de_madera": "Wooden Table"
 }

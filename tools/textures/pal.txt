@@ -1,0 +1,19 @@
+// Talavera poblana palette. Every value is a pixel color sampled from a vanilla glazed terracotta texture.
+// azul: blue_glazed_terracotta
+D=2c2e8f
+M=3c44aa
+L=4577d3
+// amarillo: yellow_glazed_terracotta, white_glazed_terracotta
+Y=f2b015
+y=fed83d
+// naranja: orange_glazed_terracotta
+O=e16100
+o=f9801d
+// verde: green_glazed_terracotta
+G=5e7c16
+g=729b24
+// malva: purple_glazed_terracotta
+V=641f9c
+v=8932b8
+// negro: black_glazed_terracotta
+K=1d1d21

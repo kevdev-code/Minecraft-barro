@@ -1,0 +1,13 @@
+sym=mirror
+// blue_glazed_terracotta, light_blue_glazed_terracotta
+noise=11 1
+~22=37399b
+~78=3c44aa
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .

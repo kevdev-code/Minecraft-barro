@@ -1,0 +1,13 @@
+sym=rot
+// glaze: creams from white_glazed_terracotta
+noise=7 1
+~22=f2f0e4
+~78=f8f3e5
+L . . . . . . .
+. . . . . . . .
+. . G G G . . .
+. G g g g G . .
+. G g D D g G .
+. . G g g D D .
+. . . G G . M D
+. . . . . . D Y

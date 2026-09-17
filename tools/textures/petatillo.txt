@@ -1,0 +1,24 @@
+sym=full
+H=c66851
+A=a25326
+R=9b5643
+E=8e3c2e
+S=7c4536
+m=a2867d
+n=8b6e67
+H H A A A A A m H R R m H E E m
+A A A A R A A m R R R m E E E m
+S S S S S S S n R R R m E E E m
+m m m m m m m m R R S m E A E m
+H H E E E E E m R R R m E E E m
+E E E E E A E m R R R m E E E m
+S S S S S S S n S S S n S S S n
+m m m m m m m m m m m m m m m m
+H A A m H R R m H H R R R R R m
+A A A m R R R m R R R R A R R m
+A A A m R R R m S S S S S S S n
+A R A m R E R m m m m m m m m m
+A A A m R R R m H H A A A A A m
+A A A m R R R m A A A A A E A m
+S S S n S S S n S S S S S S S n
+m m m m m m m m m m m m m m m m

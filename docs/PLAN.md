@@ -48,6 +48,12 @@ del juego — terracota, terracota vidriada, cobre en sus estados de oxidación,
 maderas. No se inventan colores. Un bloque que no comparte la paleta se detecta al
 instante aunque el jugador no sepa explicar por qué.
 
+De vanilla se toman **solo los colores**, nunca el acomodo de píxeles. Los motivos se
+diseñan a mano y la variación del material (esmalte, grano, tierra) es ruido propio
+generado con semilla. Las texturas se generan con `java tools/textures/Tex.java`
+desde los specs de `tools/textures/`; para cambiar una textura se edita su spec y se
+regenera, no el PNG.
+
 **Cada pieza es autónoma.** Ninguna pieza depende de otra para ser útil. Esto permite
 cortar el alcance en cualquier momento y seguir teniendo algo publicable.
 

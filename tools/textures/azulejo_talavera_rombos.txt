@@ -1,0 +1,13 @@
+sym=mirror8
+// glaze: creams from white_glazed_terracotta
+noise=7 1
+~22=f2f0e4
+~78=f8f3e5
+D L . . . . . D
+- . . . . . D M
+- - . . . D M .
+- - - . D M . .
+- - - - M . . M
+- - - - - . M .
+- - - - - - . D
+- - - - - - - L

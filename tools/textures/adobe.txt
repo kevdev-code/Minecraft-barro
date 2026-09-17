@@ -1,0 +1,30 @@
+sym=full
+// body: packed_mud, mud_bricks
+noise=31 1
+~7=8c674f
+~31=957150
+~98=9d785c
+~59=a7815a
+~61=ab8661
+// mortar (mud_bricks / packed_mud), straw (hay_block_side)
+m=7e5d48
+n=8c674f
+s=957150
+P=94801e
+p=ab9225
+. . . . . . . . . . . . . . . m
+. . P . . . . . . . . . . . . m
+. . . P . . . . . . p . . . . m
+. . . . . . . . . P . . . . . m
+. . . . . . . . . . . . P . . n
+. p . . . . . . . . . . . P . m
+s s . s s s s . s s s s s s s m
+m m m n m m m m m m n m m m m m
+. . . . . . . m . . . . . . . .
+. . . . . . . m . . P . . . . .
+. P . . . . . n . . . P . . . .
+. . P . . . . m . . . . . . . .
+. . . . . p . m . . . . . p . .
+. . . . . . . m . . . . . . . .
+s s s s . s s m s s . s s s s s
+m m n m m m m m m m m m n m m m

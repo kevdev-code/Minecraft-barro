@@ -7,5 +7,10 @@
   "block.barro.azulejo_talavera_cruz": "Azulejo de talavera (cruz)",
   "block.barro.azulejo_talavera_sol": "Azulejo de talavera (sol)",
   "block.barro.azulejo_talavera_medallon": "Azulejo de talavera (medallón)",
-  "block.barro.azulejo_talavera_cenefa": "Azulejo de talavera (cenefa)"
+  "block.barro.azulejo_talavera_cenefa": "Azulejo de talavera (cenefa)",
+  "block.barro.azulejo_talavera_liso_azul": "Azulejo de talavera liso azul",
+  "block.barro.azulejo_talavera_liso_amarillo": "Azulejo de talavera liso amarillo",
+  "block.barro.azulejo_talavera_liso_verde": "Azulejo de talavera liso verde",
+  "block.barro.barro_cocido": "Barro cocido",
+  "block.barro.petatillo": "Petatillo"
 }

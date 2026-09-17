@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_barro_cocido": {
+      "conditions": {
+        "items": [
+          {
+            "items": "barro:barro_cocido"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "barro:petatillo"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_barro_cocido"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "barro:petatillo"
+    ]
+  }
+}

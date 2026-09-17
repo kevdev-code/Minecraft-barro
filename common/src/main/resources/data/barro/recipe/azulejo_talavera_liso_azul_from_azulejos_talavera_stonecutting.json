@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "#barro:azulejos_talavera",
+  "result": {
+    "id": "barro:azulejo_talavera_liso_azul"
+  }
+}

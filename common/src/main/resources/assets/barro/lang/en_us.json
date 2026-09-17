@@ -7,5 +7,10 @@
   "block.barro.azulejo_talavera_cruz": "Talavera Tile (Cross)",
   "block.barro.azulejo_talavera_sol": "Talavera Tile (Sun)",
   "block.barro.azulejo_talavera_medallon": "Talavera Tile (Medallion)",
-  "block.barro.azulejo_talavera_cenefa": "Talavera Tile (Border)"
+  "block.barro.azulejo_talavera_cenefa": "Talavera Tile (Border)",
+  "block.barro.azulejo_talavera_liso_azul": "Plain Blue Talavera Tile",
+  "block.barro.azulejo_talavera_liso_amarillo": "Plain Yellow Talavera Tile",
+  "block.barro.azulejo_talavera_liso_verde": "Plain Green Talavera Tile",
+  "block.barro.barro_cocido": "Fired Clay",
+  "block.barro.petatillo": "Petatillo Floor"
 }

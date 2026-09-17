@@ -98,7 +98,8 @@ texturizar otro patrón o material. Hasta entonces no se sabe cuánto cuesta una
 (Hecho con `flor`.)
 
 **Patrones de talavera:** `flor`, `estrella`, `rombos`, `hojas`, `cruz`, `sol`,
-`medallon`, `cenefa`.
+`medallon`, `cenefa`, más los lisos `liso_azul`, `liso_amarillo` y `liso_verde` para
+enmarcar los patrones.
 
 - **Paleta:** solo los seis colores de la talavera poblana (azul, amarillo, naranja,
   verde, malva y negro) sobre el mismo esmalte crema. Cada color sale de la terracota
@@ -109,6 +110,12 @@ texturizar otro patrón o material. Hasta entonces no se sabe cuánto cuesta una
   los patrones, incluida `flor`, salen del cortapiedras a partir de cualquier azulejo
   del tag `barro:azulejos_talavera`. Un patrón nuevo solo necesita entrar al tag y
   tener su receta de cortapiedras.
+
+**Barro cocido:** `barro_cocido` es el material liso, base de las losas, escaleras y
+muros de la Fase 2. `petatillo` es el piso de ladrillitos en tejido de canasta. Las
+dos tienen las propiedades de la terracota de vanilla. Recetas: 2x2 terracota → 4
+`barro_cocido` y 2x2 `barro_cocido` → 4 `petatillo`, cada una también en el
+cortapiedras.
 
 ### Fase 2 — Variantes derivadas
 
